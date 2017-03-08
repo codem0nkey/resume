@@ -100,44 +100,29 @@ var education = {
 	]	
 };
 
-/*
+
 bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	var formattedCell = HTMLmobile.replace("%data%", bio.contacts.cell);
-	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-	var formattedPicture = HTMLbioPic.replace("%data%", bio.picture);
-	var formattedSkills1 = HTMLskills.replace("%data%", bio.skills[0]);
-	var formattedSkills2 = HTMLskills.replace("%data%", bio.skills[1]);
-	var formattedSkills3 = HTMLskills.replace("%data%", bio.skills[2]);
+	var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").prepend([formattedRole]);
 	$("#header").prepend([formattedName]);
-	$("#header").append([formattedPicture]);
+	$("#header").append([formattedBiopic]);
 	$("#header").append([formattedWelcome]);
 	$("#header").append([HTMLskillsStart]);
-	$("#header").append([formattedSkills1]);
-	$("#header").append([formattedSkills2]);
-	$("#header").append([formattedSkills3]);
-	$("#topContacts, #footerContacts").append([formattedEmail]);
-	$("#topContacts, #footerContacts").append([formattedCell]);
-	$("#topContacts, #footerContacts").append([formattedTwitter]);
-	$("#topContacts, #footerContacts").append([formattedGithub]);
-	$("#topContacts, #footerContacts").append([formattedLocation]);
-};
-*/
 
-bio.display = function() {
-	// if item does not equal contacts or skills, for loop to declare variable for formatting and post via jQuery
+	bio.skills.forEach(function(skill) {
+		var formattedSkill = HTMLskills.replace("%data%", skill);
+		$("#header").append([formattedSkill]);
+	});
 	
-	//for item in skills, variable and jQuery
-	
-	//for item in contacts, variable and jQuery
-	
+	bio.contacts.forEach(function(contact) {
+		var formattedContact = HTMLcontactGeneric.replace( "%contact%", contact).replace("%data%", contact);
+		$("#topContacts, #footerContacts").append([formattedContact]);
+	});
 };
+
 
 
 work.display = function() {
