@@ -15,7 +15,7 @@
 	 "CSS", 
 	 "Javascript"
 	 ],
-	 "biopic" : "images/fry.jpg"
+	 "biopic" : "images/homer.jpg"
  };
  
  bio.display = function() {
@@ -87,7 +87,7 @@ work.display = function() {
 
 var projects = {
 	"projects": [{
-		"title": "project 1",
+		"title": "Death Star",
 		"dates": "2010-2011",
 		"description": "The first project",
 		"images": [
