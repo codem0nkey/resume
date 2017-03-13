@@ -124,7 +124,7 @@ var education = {
 		},
 		{
 			"name" : "Jedi Training Academy",
-			"location" : "New York, NY",
+			"location" : "Lubbock, TX",
 			"degree" : "Using the Force",
 			"majors" : "Lightsaber Dueling",
 			"dates" : "1974-1995",
@@ -141,7 +141,7 @@ var education = {
 		{
 			"title" : "Front-End Developer Nanodegree",
 			"school" : "Udacity",
-			"dates" : "current",
+			"dates" : "2017",
 			"url" : "www.udacity.com"
 		}
 	]	
@@ -175,12 +175,19 @@ education.display = function () {
 	};
 };
 
+function displayMap() {
+var mapTime = googleMap;
+$("#mapDiv").append(mapTime);
+};
+
+
 
 
 bio.display();
 work.display();
 education.display();
 projects.display();
+displayMap();
 
 
 

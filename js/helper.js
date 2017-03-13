@@ -182,7 +182,7 @@ function initializeMap() {
     });
 
     // this is where the pin actually gets added to the map.
-    // bounds.extend() takes in a map location object
+    //bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
     // fit the map to the new marker
     map.fitBounds(bounds);
@@ -240,11 +240,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+map.fitBounds(mapBounds);
+});
