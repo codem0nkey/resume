@@ -156,6 +156,8 @@ education.display = function () {
 		$(".education-entry").append(formattedSchoolName + formattedSchoolDegree);
 		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 		$(".education-entry").append(formattedSchoolDates);
+		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		$(".education-entry").append(formattedSchoolLocation);
 		var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 		$(".education-entry").append(formattedSchoolMajor);
 	};
