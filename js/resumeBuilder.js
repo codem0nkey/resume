@@ -43,21 +43,21 @@
 var work = {
 	"jobs" : [
 		{
-			"employer" : "www.att.com",
+			"employer" : "AT&T",
 			"title" : "Professional-Network Support",
 			"dates" : "2013 - present",
 			"location" : "Cerritos, CA",
 			"description" : "National Tier 2 Radio Access Network Engineer supporting RF Engineering, Field & Switch Network Operations, and Network Engineering"
 		},
 		{
-			"employer" : "www.att.com",
+			"employer" : "AT&T",
 			"title" : "Sr.  Specialist-Network Support",
 			"dates" : "2011 - 2013",
 			"location" : "Anaheim, CA",
 			"description" : "National Tier 2 Radio Access Network Engineer"
 		},
 		{
-			"employer" : "www.starwars.com",
+			"employer" : "Star Wars",
 			"title" : "Jedi Knight",
 			"dates" : "Birth - 2011",
 			"location" : "Dallas, TX",
@@ -77,6 +77,9 @@ work.display = function() {
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		$(".work-entry:last").append(formattedDates);
 		
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(formattedLocation);
+		
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	};
@@ -85,7 +88,7 @@ work.display = function() {
 var projects = {
 	"projects": [{
 		"title": "project 1",
-		"dates": "2012-2013",
+		"dates": "2010-2011",
 		"description": "The first project",
 		"images": [
 			"images/pic1.jpg",
